@@ -24,7 +24,11 @@ ALLOWED_EXTENSIONS = {
     "webm"
 }
 
-# 建立資料夾
+
+# 如果 videos 是檔案 
+if os.path.isfile(UPLOAD_FOLDER): 
+    os.remove(UPLOAD_FOLDER) 
+# 建立資料夾 
 os.makedirs( 
     UPLOAD_FOLDER, 
     exist_ok=True 
