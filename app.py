@@ -25,8 +25,10 @@ ALLOWED_EXTENSIONS = {
 }
 
 # 建立資料夾
-if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
+os.makedirs( 
+    UPLOAD_FOLDER, 
+    exist_ok=True 
+)
 
 # =========================
 # DB
